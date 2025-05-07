@@ -1,0 +1,49 @@
+@use '../base/variables' as *;
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1.5px solid var(--primary);
+  border-radius: 500px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary, 7%);
+    border: 1.5px solid darken($primary, 7%);
+    text-decoration: none;
+    color: var(--white);
+    transform: scale(1.05);
+  }
+
+  &--secondary {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+
+    &:hover {
+      color: darken($primary, 7%);
+      border: 2px solid darken($primary, 7%);
+      background-color: var(--white);
+    }
+  }
+
+  &--alt {
+    font-size: 12px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1.5px solid var(--white);
+
+    &:hover {
+      background-color: var(--white);
+      border: 1.5px solid var(--white);
+      color: var(--primary);
+    }
+  }
+}

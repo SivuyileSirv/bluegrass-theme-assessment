@@ -1,0 +1,17 @@
+@use 'base/variables' as *; // makes variables like $primary available without prefix
+@use 'base/reset';
+@use 'base/base';
+@use 'layout/layout';
+@use 'layout/nav';
+@use 'layout/footer';
+@use 'components/buttons';
+@use 'pages/home' as *; // Exposes and includes forwarded styles
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --white: #{$white};
+  --neutral-grey-2: #{$neutral-grey-2};
+  --light-grey: #{$light-grey};
+}
+

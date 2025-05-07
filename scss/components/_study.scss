@@ -1,0 +1,179 @@
+/** Study Online Section **/
+@use "../base/variables" as *;
+
+.study-online {
+  padding: 90px 0;
+  background-color: $light-grey;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  &__img-stack {
+    position: relative;
+    flex: 1 1 50%;
+    max-width: 500px;
+  }
+
+  /*
+  &__img-wrapper {
+    transform: skew(1deg, 1deg);
+    display: inline-block;
+  }
+    */
+
+  &__bg {
+    position: absolute;
+    width: 486px;
+    height: 502px;
+    background-color: $primary;
+    transform: rotate(-5deg) skew(-1deg, -1deg) scale(0.97);
+    border-radius: 8px;
+    z-index: 0;
+  }
+
+  &__img {
+    position: relative;
+    width: 486px;
+    border-radius: 14.34px;
+    height: 502px;
+    z-index: 1;
+  }
+
+  &__content {
+    flex: 1 1 50%;
+    max-width: 500px;
+  }
+
+  &__subheading {
+    color: $primary;
+    font-family: "Amazing Kids", cursive;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 10px;
+    line-height: 100%;
+  }
+
+  &__heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: $secondary;
+    line-height: 125%;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $neutral-grey-2;
+    line-height: 1.6;
+    margin-bottom: 16px;
+
+    &--large {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 10px;
+    }
+
+    &--small {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 40px;
+    }
+  }
+
+  /* Tablet & Mobile */
+  @media (max-width: 1024px) {
+    padding: 70px 0 90px 0;
+
+    &__row {
+      flex-direction: column;
+      gap: 40px;
+      text-align: left;
+    }
+
+    &__content {
+      order: 1;
+      max-width: 100%;
+      text-align: left;
+    }
+
+    &__img-stack {
+      order: 2;
+      width: 90vw;
+      max-width: none;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      border-radius: 14.34px;
+      z-index: 1;
+      position: relative;
+    }
+
+    &__bg {
+      width: 100%;
+      height: 100%;
+      background-color: $primary;
+      border-radius: 14.34px;
+      z-index: 0;
+      transform: rotate(-5deg) skew(-1deg, -1deg) scale(0.97);
+      position: absolute;
+    }
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    &__content {
+      .button {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+.study-online__pattern {
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &--top {
+    margin-bottom: -40px;
+    margin-top: 48px;
+  }
+
+  &--bottom {
+    margin-top: -40px;
+  }
+
+  @media (max-width: 1024px) {
+    &--top {
+      margin-bottom: -25px;
+    }
+
+    &--bottom {
+      margin-top: -25px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &--top {
+      margin-bottom: -12px;
+    }
+
+    &--bottom {
+      margin-top: -12px;
+    }
+  }
+}

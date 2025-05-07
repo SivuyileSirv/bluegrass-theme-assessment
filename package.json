@@ -1,0 +1,16 @@
+{
+  "name": "bluegrass-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "build-css": "sass scss/style.scss assets/css/style.css --no-source-map",
+  "watch-css": "sass --watch scss/style.scss:assets/css/style.css --no-source-map"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}

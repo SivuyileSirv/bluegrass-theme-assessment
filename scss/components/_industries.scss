@@ -1,0 +1,153 @@
+/** Industries Section **/
+@use "../base/variables" as *;
+
+.industries {
+  padding: 48px 0 48px 0;
+  background-color: var(--white);
+
+  &__heading {
+    font-size: 40px;
+    color: var(--secondary);
+    max-width: 690px;
+    margin: 0 auto 40px auto;
+    line-height: 125%;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: left;
+  }
+
+  &__card {
+    background: var(--light-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 366.67px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover .industries__card-title {
+      background: var(--primary);
+    }
+  }
+
+  &__card-image {
+    width: 100%;
+    height: 264px;
+    object-fit: cover;
+  }
+
+  &__card-title {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    width: 100.8%;
+    margin-bottom: -6px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    transform: rotate(-2deg) translateY(8px);
+    transform-origin: left bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card-title-text {
+    transform: rotate(2deg);
+  }
+
+  &__cta {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    width: 366.67px;
+    height: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__cta-heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 125%;
+  }
+
+  &__cta-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-align: left;
+    line-height: 150%;
+  }
+
+  /* Tablet & Mobile */
+  @media (max-width: 1024px) {
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    & {
+      padding: 50px 0;
+    }
+
+    &__heading {
+      font-size: 34px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    &__card {
+      width: 342px; 
+    }
+
+    &__card-image {
+      height: 250px;
+    }
+
+    &__cta {
+      width: 332px;
+      height: 250px;
+    }
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    & {
+      padding: 32px 0;
+    }
+
+    &__card {
+      width: 100%;
+    }
+
+    &__card-image {
+      height: 238px;
+    }
+
+    &__cta {
+      width: 100%;
+    }
+  }
+}
