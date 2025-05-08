@@ -1,5 +1,6 @@
 /* Hero Section */
 @use "../base/variables" as *;
+@use "../mixins/breakpoints" as *;
 
 .hero {
   position: relative;
@@ -139,7 +140,7 @@
   }
 
   /* Tablet & Mobile */
-  @media (max-width: 1024px) {
+  @include respond-to(lg) {
       background-color: var(--secondary);
 
     &__slide {
@@ -186,7 +187,7 @@
   }
 
   /* Mobile tweaks */
-  @media (max-width: 768px) {
+  @include respond-to(xmd) {
     body {
       overflow-x: hidden;
     }

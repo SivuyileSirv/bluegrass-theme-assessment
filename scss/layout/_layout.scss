@@ -1,26 +1,27 @@
 @use "../base/variables" as *;
+@use "../mixins/breakpoints" as *;
 
 // Base (Desktop)
 .container {
   padding-left: 40px;
   padding-right: 40px;
   margin: 0 auto;
-  max-width: $xl;
+  max-width: map-get($breakpoints, xl);
   width: 100%;
 }
 
 /* Tablet */
-@media (max-width: $lg) {
+@include respond-to(lg) {
   .container {
     padding-left: 40px;
     padding-right: 40px;
-    max-width: $xl;
+    max-width: map-get($breakpoints, lg);
     width: 100%;
   }
 }
 
 /* Mobile */
-@media (max-width: $md) {
+@include respond-to(md) {
   .container {
     padding-left: 24px;
     padding-right: 24px;

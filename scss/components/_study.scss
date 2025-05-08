@@ -1,5 +1,6 @@
 /** Study Online Section **/
 @use "../base/variables" as *;
+@use "../mixins/breakpoints" as *;
 
 .study-online {
   padding: 90px 0;
@@ -89,7 +90,7 @@
   }
 
   /* Tablet & Mobile */
-  @media (max-width: 1024px) {
+  @include respond-to(lg){
     padding: 70px 0 90px 0;
 
     &__row {
@@ -132,7 +133,7 @@
   }
 
   /* Mobile tweaks */
-  @media (max-width: 768px) {
+  @include respond-to(md) {
     &__content {
       .button {
         width: 100%;
@@ -149,12 +150,12 @@
   }
 
   &--top {
-    margin-bottom: -40px;
+    margin-bottom: -41px;
     margin-top: 48px;
   }
 
   &--bottom {
-    margin-top: -40px;
+    margin-top: -41px;
   }
 
   @media (max-width: 1024px) {

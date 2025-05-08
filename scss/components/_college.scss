@@ -1,5 +1,6 @@
 /** Best College Section **/
 @use "../base/variables" as *;
+@use "../mixins/breakpoints" as *;
 
 .college {
   padding: 90px 0;
@@ -98,7 +99,7 @@
   }
 
   /* Tablet & Mobile */
-  @media (max-width: 1024px) {
+  @include respond-to(lg) {
     padding: 70px 0 50px 0;
 
     &__heading {
@@ -122,7 +123,7 @@
   }
 
 /* Mobile tweaks */
-@media (max-width: 768px) {
+@include respond-to(md) {
   &__card,
   &__card-content {
     width: 100%;
