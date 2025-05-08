@@ -158,7 +158,7 @@
     margin-top: -41px;
   }
 
-  @media (max-width: 1024px) {
+  @include respond-to(lg) {
     &--top {
       margin-bottom: -25px;
     }
@@ -168,7 +168,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond-to(md) {
     &--top {
       margin-bottom: -12px;
     }
