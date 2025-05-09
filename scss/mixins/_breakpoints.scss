@@ -10,7 +10,7 @@ $breakpoints: (
   // Large (tablet)
   xl: 1200px,
   // XL (desktop)
-  xxl: 1600px // Very large screens (e.g. 22"+),,,,,,,
+  xxl: 1600px // Very large screens (e.g. 22"+)
 );
 
 @mixin respond-to($bp, $direction: max) {
