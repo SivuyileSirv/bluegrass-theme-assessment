@@ -1,8 +1,8 @@
-<div class="study-online__pattern study-online__pattern--top">
-  <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-dark.png'; ?>" alt="Pattern" />
-</div>
-
 <footer class="footer">
+  <!-- Pattern Top -->
+  <div class="footer__pattern footer__pattern--top">
+    <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-dark.png'; ?>" alt="Pattern" />
+  </div>
   <div class="container">
     <!-- Top Section: Logo + Footer Columns -->
     <div class="footer__columns">
@@ -130,7 +130,8 @@
       <div class="footer__disclaimer">
         <p>
           The Independent Institute of Education’s official prospectus is available on <span><a class="footer__link"
-              href="#">www.iie.ac.za</a></span> and on the library webpage. Information in this prospectus takes precedence over other programme and qualification information provided.
+              href="#">www.iie.ac.za</a></span> and on the library webpage. Information in this prospectus takes
+          precedence over other programme and qualification information provided.
         </p>
       </div>
     </div>

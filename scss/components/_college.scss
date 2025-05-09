@@ -3,7 +3,7 @@
 @use "../mixins/breakpoints" as *;
 
 .college {
-  padding: 90px 0;
+  padding: 90px 0 150px 0;
 
   &__intro {
     text-align: center;
@@ -100,8 +100,6 @@
 
   /* Tablet & Mobile */
   @include respond-to(lg) {
-    padding: 70px 0 50px 0;
-
     &__heading {
       font-size: 34px;
     }
@@ -124,6 +122,7 @@
 
 /* Mobile tweaks */
 @include respond-to(md) {
+  padding: 70px 0;
   &__card,
   &__card-content {
     width: 100%;

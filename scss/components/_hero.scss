@@ -5,7 +5,6 @@
 .hero {
   position: relative;
   overflow: hidden;
-  height: 635px;
   padding-bottom: 48px;
   // background-color: var(--secondary);
 
@@ -141,7 +140,8 @@
 
   /* Tablet & Mobile */
   @include respond-to(lg) {
-      background-color: var(--secondary);
+    background-color: var(--secondary);
+    height: 900px;
 
     &__slide {
       flex-direction: column;
@@ -151,7 +151,7 @@
       order: 1;
       flex: 1 1 auto;
       max-width: 100%;
-      padding: 0 40px;
+      padding: 70px 40px 30px 40px;
       clip-path: none;
       text-align: left;
       align-items: flex-start;
@@ -166,14 +166,14 @@
         font-size: 40px;
         font-weight: 800;
         line-height: 125%;
-        margin-bottom: 24px;
+        padding-bottom: 10px;
       }
 
       p {
         font-size: 20px;
         font-weight: 500;
         line-height: 150%;
-        margin-bottom: 24px;
+        padding-bottom: 24px;
       }
     }
 
@@ -184,13 +184,42 @@
       height: 481px;
       clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     }
+
+    .slider-arrows{
+      top: 47%;
+    }
+
+    &__shape {
+      &--32 {
+        top: 200px;
+        left: 550px;
+        width: 123px;
+      }
+  
+      &--34 {
+        top: 260px;
+        left: 680px;
+        width: 46.81px;
+        transform: rotate(120deg);
+      }
+  
+      &--31 {
+        top: 660px;
+        left: 5%;
+        width: 75px;
+        z-index: 4;
+      }
+  
+      &--33 {
+        bottom: 130px;
+        right: 90px;
+        width: 90px;
+      }
+    }
   }
 
   /* Mobile tweaks */
-  @include respond-to(xmd) {
-    body {
-      overflow-x: hidden;
-    }
+  @include respond-to(md) {
 
     &,
     &__slide,
@@ -201,7 +230,38 @@
     }
 
     &__content {
-      padding: 0 24px;
+      padding-bottom: 30px;
+    }
+
+    &__text {
+      p {
+        padding-bottom: 24px;
+      }
+    }
+
+    &__shape {
+      &--32 {
+        top: 310px;
+        left: 200px;
+        width: 110px;
+      }
+  
+      &--34 {
+        top: 360px;
+        left: 310px;
+        width: 46.81px;
+        transform: rotate(120deg);
+      }
+  
+      &--31 {
+        display: none;
+      }
+  
+      &--33 {
+        bottom: 60px;
+        right: 60px;
+        width: 60px;
+      }
     }
 
     &__image {

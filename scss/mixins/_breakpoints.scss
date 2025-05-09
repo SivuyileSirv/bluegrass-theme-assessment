@@ -1,17 +1,32 @@
 // _breakpoints.scss
 $breakpoints: (
-  xs: 480px,   // XS phones
-  sm: 576px,   // Small phones
-  md: 768px,   // Medium (mobile)
-  lg: 1024px,  // Large (tablet)
-  xl: 1200px,   // XL (desktop)
-  xxl: 1400px    // Very large screens (e.g. 22"+)
+  xs: 480px,
+  // XS phones
+  sm: 576px,
+  // Small phones
+  md: 768px,
+  // Medium (mobile)
+  lg: 1024px,
+  // Large (tablet)
+  xl: 1200px,
+  // XL (desktop)
+  xxl: 1600px // Very large screens (e.g. 22"+),,,,,,,
 );
 
-@mixin respond-to($bp) {
+@mixin respond-to($bp, $direction: max) {
   @if map-has-key($breakpoints, $bp) {
-    @media (max-width: map-get($breakpoints, $bp)) {
-      @content;
+    $value: map-get($breakpoints, $bp);
+
+    @if $direction == max {
+      @media (max-width: $value) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $value) {
+        @content;
+      }
+    } @else {
+      @warn "Invalid direction '#{$direction}' passed. Use 'min' or 'max'.";
     }
   } @else {
     @warn "Breakpoint not found: #{$bp}. Available breakpoints are: #{map-keys($breakpoints)}.";

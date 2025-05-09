@@ -141,11 +141,11 @@
 </section>
 
 <!-- Study Online Section -->
-<div class="study-online__pattern study-online__pattern--top">
-  <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-light-top.png'; ?>" alt="Pattern" />
-</div>
-
 <div class="study-online">
+  <!-- Pattern Top -->
+  <div class="study-online__pattern study-online__pattern--top">
+    <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-light-top.png'; ?>" alt="Pattern" />
+  </div>
   <div class="container">
     <div class="study-online__row">
       <!-- Image card stack -->
@@ -176,12 +176,11 @@
       </div>
     </div>
   </div>
+  <!-- pattern Bottom -->
+  <div class="study-online__pattern study-online__pattern--bottom">
+    <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-light-bottom.png'; ?>" alt="Pattern" />
+  </div>
 </div>
-
-<div class="study-online__pattern study-online__pattern--bottom">
-  <img src="<?php echo THEME_DIR_URI . '/assets/imgs/pattern-light-bottom.png'; ?>" alt="Pattern" />
-</div>
-
 
 <!-- Best College Section -->
 <div class="college">

@@ -38,6 +38,7 @@ body {
   line-height: 125%;
   color: var(--secondary);
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -293,6 +294,18 @@ ul, li {
   /* Tablet & Mobile */
   /* Mobile tweaks */
 }
+.footer__pattern--top {
+  top: -130px;
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer__pattern--top img {
+  width: 100%;
+  display: block;
+}
 .footer__columns {
   display: flex;
   justify-content: space-between;
@@ -442,6 +455,9 @@ ul, li {
   gap: 1.5rem;
 }
 @media (max-width: 1024px) {
+  .footer__pattern--top {
+    top: -90px;
+  }
   .footer__columns {
     flex-direction: column;
   }
@@ -554,6 +570,9 @@ ul, li {
   }
 }
 @media (max-width: 768px) {
+  .footer__pattern--top {
+    top: -70px;
+  }
   .footer__column--logo img {
     width: 178.57px;
     height: 50px;
@@ -616,7 +635,6 @@ ul, li {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 635px;
   padding-bottom: 48px;
   /* Tablet & Mobile */
   /* Mobile tweaks */
@@ -736,6 +754,7 @@ ul, li {
 @media (max-width: 1024px) {
   .hero {
     background-color: var(--secondary);
+    height: 900px;
   }
   .hero__slide {
     flex-direction: column;
@@ -744,7 +763,7 @@ ul, li {
     order: 1;
     flex: 1 1 auto;
     max-width: 100%;
-    padding: 0 40px;
+    padding: 70px 40px 30px 40px;
     clip-path: none;
     text-align: left;
     align-items: flex-start;
@@ -758,13 +777,13 @@ ul, li {
     font-size: 40px;
     font-weight: 800;
     line-height: 125%;
-    margin-bottom: 24px;
+    padding-bottom: 10px;
   }
   .hero__text p {
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
   .hero__image {
     order: 2;
@@ -773,11 +792,73 @@ ul, li {
     height: 481px;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
   }
+  .hero .slider-arrows {
+    top: 47%;
+  }
+  .hero__shape--32 {
+    top: 200px;
+    left: 550px;
+    width: 123px;
+  }
+  .hero__shape--34 {
+    top: 260px;
+    left: 680px;
+    width: 46.81px;
+    transform: rotate(120deg);
+  }
+  .hero__shape--31 {
+    top: 660px;
+    left: 5%;
+    width: 75px;
+    z-index: 4;
+  }
+  .hero__shape--33 {
+    bottom: 130px;
+    right: 90px;
+    width: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .hero, .hero__slide, .hero__content, .hero__image {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .hero__content {
+    padding-bottom: 30px;
+  }
+  .hero__text p {
+    padding-bottom: 24px;
+  }
+  .hero__shape--32 {
+    top: 310px;
+    left: 200px;
+    width: 110px;
+  }
+  .hero__shape--34 {
+    top: 360px;
+    left: 310px;
+    width: 46.81px;
+    transform: rotate(120deg);
+  }
+  .hero__shape--31 {
+    display: none;
+  }
+  .hero__shape--33 {
+    bottom: 60px;
+    right: 60px;
+    width: 60px;
+  }
+  .hero__image {
+    min-height: 360px;
+  }
+  .hero .slider-arrows {
+    display: none;
+  }
 }
 
 /** Industries Section **/
 .industries {
-  padding: 48px 0 48px 0;
+  padding: 40px 0 120px 0;
   background-color: var(--white);
   /* Tablet & Mobile */
   /* Mobile tweaks */
@@ -816,12 +897,12 @@ ul, li {
   object-fit: cover;
 }
 .industries__card-title {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(93, 93, 93, 0.936);
   color: var(--white);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 100px;
   width: 100.8%;
   margin-bottom: -6px;
   font-weight: 600;
@@ -832,6 +913,7 @@ ul, li {
   display: flex;
   justify-content: center;
   align-items: center;
+  clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
 }
 .industries__card-title-text {
   transform: rotate(2deg);
@@ -863,6 +945,9 @@ ul, li {
   line-height: 150%;
 }
 @media (max-width: 1024px) {
+  .industries {
+    margin: 70px 0;
+  }
   .industries__grid {
     display: flex;
     flex-wrap: wrap;
@@ -889,6 +974,9 @@ ul, li {
   }
 }
 @media (max-width: 768px) {
+  .industries {
+    margin: 50px 0;
+  }
   .industries__grid {
     grid-template-columns: 1fr;
   }
@@ -908,6 +996,7 @@ ul, li {
 
 /** Study Online Section **/
 .study-online {
+  position: relative;
   padding: 90px 0;
   background-color: #fafafa;
   /*
@@ -987,7 +1076,7 @@ ul, li {
 }
 @media (max-width: 1024px) {
   .study-online {
-    padding: 70px 0 90px 0;
+    padding: 70px 0 120px 0;
   }
   .study-online__row {
     flex-direction: column;
@@ -1024,43 +1113,68 @@ ul, li {
   }
 }
 @media (max-width: 768px) {
+  .study-online {
+    padding-bottom: 90px;
+  }
   .study-online__content .button {
     width: 100%;
     display: block;
   }
+  .study-online__img-stack {
+    margin-top: 20px;
+  }
 }
 
+.study-online__pattern {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
 .study-online__pattern img {
   display: block;
   width: 100%;
+  height: auto;
 }
 .study-online__pattern--top {
-  margin-bottom: -41px;
-  margin-top: 48px;
+  top: -40px;
 }
 .study-online__pattern--bottom {
-  margin-top: -41px;
+  bottom: -40px;
 }
 @media (max-width: 1024px) {
   .study-online__pattern--top {
-    margin-bottom: -25px;
+    top: -25px;
   }
   .study-online__pattern--bottom {
-    margin-top: -25px;
+    bottom: -25px;
   }
 }
 @media (max-width: 768px) {
+  .study-online__pattern {
+    top: auto;
+    bottom: auto;
+  }
   .study-online__pattern--top {
-    margin-bottom: -12px;
+    margin-top: -82px;
   }
   .study-online__pattern--bottom {
-    margin-top: -12px;
+    margin-top: 75px;
   }
 }
 
+@media (min-width: 1600px) {
+  .study-online__pattern--top {
+    top: -53px;
+  }
+  .study-online__pattern--bottom {
+    bottom: -53px;
+  }
+}
 /** Best College Section **/
 .college {
-  padding: 90px 0;
+  padding: 90px 0 150px 0;
   /* Tablet & Mobile */
   /* Mobile tweaks */
 }
@@ -1145,9 +1259,6 @@ ul, li {
   text-align: center;
 }
 @media (max-width: 1024px) {
-  .college {
-    padding: 70px 0 50px 0;
-  }
   .college__heading {
     font-size: 34px;
   }
@@ -1164,6 +1275,9 @@ ul, li {
   }
 }
 @media (max-width: 768px) {
+  .college {
+    padding: 70px 0;
+  }
   .college__card, .college__card-content {
     width: 100%;
     max-width: 100%;

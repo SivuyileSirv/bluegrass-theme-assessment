@@ -3,6 +3,7 @@
 @use "../mixins/breakpoints" as *;
 
 .study-online {
+  position: relative;
   padding: 90px 0;
   background-color: $light-grey;
 
@@ -90,8 +91,8 @@
   }
 
   /* Tablet & Mobile */
-  @include respond-to(lg){
-    padding: 70px 0 90px 0;
+  @include respond-to(lg) {
+    padding: 70px 0 120px 0;
 
     &__row {
       flex-direction: column;
@@ -134,47 +135,74 @@
 
   /* Mobile tweaks */
   @include respond-to(md) {
+    padding-bottom: 90px;
+
     &__content {
       .button {
         width: 100%;
         display: block;
       }
     }
+
+    &__img-stack {
+      margin-top: 20px;
+    }
   }
 }
 
 .study-online__pattern {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+
   img {
     display: block;
     width: 100%;
+    height: auto;
   }
 
   &--top {
-    margin-bottom: -41px;
-    margin-top: 48px;
+    top: -40px;
   }
 
   &--bottom {
-    margin-top: -41px;
+    bottom: -40px;
   }
 
   @include respond-to(lg) {
     &--top {
-      margin-bottom: -25px;
+      top: -25px;
     }
 
     &--bottom {
-      margin-top: -25px;
+      bottom: -25px;
     }
   }
 
   @include respond-to(md) {
+    
+    top: auto;
+    bottom: auto;
+
     &--top {
-      margin-bottom: -12px;
+      margin-top: -82px;
     }
 
     &--bottom {
-      margin-top: -12px;
+      margin-top: 75px;
     }
   }
 }
+
+@include respond-to(xxl, min) {
+  .study-online__pattern--top {
+    top: -53px;
+  }
+
+  .study-online__pattern--bottom {
+    bottom: -53px;
+  }
+}
+
