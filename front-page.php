@@ -184,6 +184,19 @@
 
 <!-- Best College Section -->
 <div class="college">
+  <!-- Shapes inside content -->
+  <div class="college__bg-shapes">
+    <img class="college__shape college__shape--31" src="<?php echo THEME_DIR_URI . '/assets/icons/polygon-31.png'; ?>"
+      alt="Polygon 31">
+    <img class="college__shape college__shape--32" src="<?php echo THEME_DIR_URI . '/assets/icons/polygon-32.png'; ?>"
+      alt="Polygon 32">
+    <img class="college__shape college__shape--33" src="<?php echo THEME_DIR_URI . '/assets/icons/polygon-33.png'; ?>"
+      alt="Polygon 33">
+    <img class="college__shape college__shape--35" src="<?php echo THEME_DIR_URI . '/assets/icons/polygon-35.png'; ?>"
+      alt="Polygon 35">
+    <img class="college__shape college__shape--36" src="<?php echo THEME_DIR_URI . '/assets/icons/polygon-36.png'; ?>"
+      alt="Polygon 36">
+  </div>
   <div class="container">
     <div class="college__intro">
       <h2 class="college__heading"><?php echo esc_html(get_field('college_heading')); ?></h2>

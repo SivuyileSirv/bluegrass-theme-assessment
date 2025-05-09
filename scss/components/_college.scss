@@ -4,6 +4,12 @@
 
 .college {
   padding: 90px 0 150px 0;
+  position: relative;
+  overflow: hidden;
+
+  &__bg-shapes {
+    display: none;
+  }
 
   &__intro {
     text-align: center;
@@ -33,6 +39,8 @@
     justify-content: center;
     max-width: 1180px;
     margin: 0 auto;
+    z-index: 5;
+    position: relative;
   }
 
   &__card {
@@ -100,10 +108,55 @@
 
   /* Tablet & Mobile */
   @include respond-to(lg) {
+    @include respond-to(lg) {
+      .college__bg-shapes {
+        max-width: 100vw;
+      }
+
+      .college__shape {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+
+        &--31 {
+          top: 1000px;
+          left: 100px;
+          width: 100px;
+        }
+
+        &--32 {
+          top: 280px;
+          left: 70px;
+          width: 180px;
+        }
+
+        &--33 {
+          top: 920px;
+          left: 575px;
+          width: 140.55px;
+          z-index: 4;
+        }
+
+        &--35 {
+          bottom: 990px;
+          right: 150px;
+          width: 150px;
+        }
+
+        &--36 {
+          bottom: 590px;
+          right: 660px;
+          width: 100px;
+        }
+      }
+    }
+
     &__heading {
       font-size: 34px;
     }
-  
+
     &__cards {
       flex-direction: column;
       align-items: center;
@@ -112,7 +165,7 @@
     &__card-bg {
       width: 85%;
     }
-  
+
     &__card,
     &__card-content {
       width: 480px;
@@ -120,25 +173,28 @@
     }
   }
 
-/* Mobile tweaks */
-@include respond-to(md) {
-  padding: 70px 0;
-  &__card,
-  &__card-content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  &__card-bg {
-    width: 90%;
-  }
-
-  &__action {
-    .button {
+  /* Mobile tweaks */
+  @include respond-to(md) {
+    padding: 70px 0;
+    &__card,
+    &__card-content {
       width: 100%;
-      display: block;
+      max-width: 100%;
+    }
+
+    &__card-bg {
+      width: 90%;
+    }
+
+    &__action {
+      .button {
+        width: 100%;
+        display: block;
+      }
+
+      &__bg-shapes {
+        display: none;
+      }
     }
   }
-}
-
 }
