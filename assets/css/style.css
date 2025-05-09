@@ -1164,12 +1164,20 @@ ul, li {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .study-online__pattern--top {
-    top: -53px;
+    top: -48px;
   }
   .study-online__pattern--bottom {
-    bottom: -53px;
+    bottom: -48px;
+  }
+}
+@media (min-width: 1920px) {
+  .study-online__pattern--top {
+    top: -78px;
+  }
+  .study-online__pattern--bottom {
+    bottom: -78px;
   }
 }
 /** Best College Section **/

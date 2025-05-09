@@ -1,16 +1,12 @@
 // _breakpoints.scss
 $breakpoints: (
-  xs: 480px,
-  // XS phones
-  sm: 576px,
-  // Small phones
-  md: 768px,
-  // Medium (mobile)
-  lg: 1024px,
-  // Large (tablet)
-  xl: 1200px,
-  // XL (desktop)
-  xxl: 1600px // Very large screens (e.g. 22"+)
+  xs: 480px,   // XS phones
+  sm: 576px,   // Small phones
+  md: 768px,   // Medium (mobile)
+  lg: 1024px,  // Large (tablet)
+  xl: 1200px,  // XL (desktop)
+  xxl: 1400px,  // Large screens (e.g. 21"+),
+  xxxl: 1920px, // Full HD (e.g. 24"+)
 );
 
 @mixin respond-to($bp, $direction: max) {
