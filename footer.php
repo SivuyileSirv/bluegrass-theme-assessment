@@ -1,5 +1,6 @@
-        <?php get_template_part('template-parts/footer-part'); ?>
-    <?php wp_footer(); ?>
+<?php get_template_part('template-parts/footer-layout'); ?>
+<?php wp_footer(); ?>
 
-  </body>
+</body>
+
 </html>
