@@ -20,7 +20,7 @@
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 32px;
-    color: $secondary;
+    color: var(--secondary);
     line-height: 125%;
   }
 
@@ -28,7 +28,7 @@
     max-width: 780px;
     margin: 0 auto;
     font-size: 20px;
-    color: $secondary;
+    color: var(--secondary);
     line-height: 150%;
   }
 
@@ -58,7 +58,7 @@
     left: 13px;
     width: 98%;
     height: 100%;
-    background-color: $primary;
+    background-color: var(--primary);
     transform: rotate(3.5deg);
     border-radius: 20px;
     z-index: 0;
@@ -67,7 +67,7 @@
   &__card-content {
     position: relative;
     width: 320px;
-    background-color: $white;
+    background-color: var(--white);
     border-radius: 20px;
     padding: 30px 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -92,12 +92,12 @@
     font-weight: 600;
     line-height: 150%;
     margin-bottom: 10px;
-    color: $secondary;
+    color: var(--secondary);
   }
 
   &__card-text {
     font-size: 15px;
-    color: $neutral-grey-2;
+    color: var(--secondary);
     line-height: 150%;
   }
 
@@ -108,10 +108,8 @@
 
   /* Tablet & Mobile */
   @include respond-to(lg) {
-    @include respond-to(lg) {
-      .college__bg-shapes {
-        max-width: 100vw;
-      }
+    .college__bg-shapes {
+      max-width: 100vw;
 
       .college__shape {
         display: block;
